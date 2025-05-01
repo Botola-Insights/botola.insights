@@ -192,6 +192,25 @@ nav {
   z-index: 2;
 }
 
+.hero-content-right {
+  max-width: 400px;
+  margin-right: 64px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Keep any sizing/positioning styles you already have */
+}
+
+.hero-logo {
+  width: 80%; /* Adjust as needed */
+  max-width: 400px; /* Prevents logo from getting too large */
+}
+
 .hero h1 {
   font-size: 56px;
   color: var(--white);
@@ -537,4 +556,20 @@ footer .social-icon {
 
 footer .social-icon:hover {
   background: var(--primary);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between logo and text */
+}
+
+.logo img {
+  width: 40px; /* Adjust size as needed */
+  height: auto;
+}
+
+.logo h2 {
+  margin: 0; /* Remove default margin from heading */
+  font-size: 1.5rem; /* Adjust as needed */
 }
