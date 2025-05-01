@@ -1,0 +1,217 @@
+/* Responsive Styles */
+
+/* Large screens (default) */
+/* Styles already defined in main.css */
+
+/* Medium screens (tablets, less than 992px) */
+@media (max-width: 992px) {
+  .hero-content {
+    margin-left: 32px;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+  }
+  
+  .slogan {
+    font-size: 20px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
+  
+  .service-card {
+    padding: 24px;
+  }
+  
+  .stats-container {
+    justify-content: space-around;
+  }
+}
+
+/* Small screens (mobile, less than 768px) */
+@media (max-width: 768px) {
+  /* Navigation */
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    clip-path: circle(0% at 100% 0);
+    transition: all 0.4s ease-out;
+    pointer-events: none;
+  }
+  
+  .nav-links.active {
+    clip-path: circle(150% at 100% 0);
+    pointer-events: all;
+  }
+  
+  .nav-links li {
+    margin: 16px 0;
+  }
+  
+  .nav-toggle {
+    display: flex;
+    z-index: 2;
+  }
+  
+  .nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+  
+  /* Hero Section */
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero-content {
+    margin: 0 16px;
+    max-width: 100%;
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+  }
+  
+  .slogan {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+  
+  .hero-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 0;
+  }
+  
+  .shape {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 0.2;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 64px 0;
+  }
+  
+  .about-content {
+    gap: 32px;
+  }
+  
+  .about-text, .stats-container {
+    text-align: center;
+  }
+  
+  .stat-box {
+    flex: 1;
+    min-width: 120px;
+  }
+  
+  /* Services Section */
+  .services {
+    padding: 64px 0;
+  }
+  
+  .services-grid {
+    gap: 24px;
+  }
+  
+  /* Contact Section */
+  .contact {
+    padding: 64px 0;
+  }
+  
+  .contact-content {
+    gap: 40px;
+  }
+  
+  .contact-info, .contact-form {
+    text-align: center;
+  }
+  
+  .contact-item {
+    justify-content: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  /* Footer */
+  .footer-content {
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .footer-links {
+    width: 100%;
+    justify-content: space-around;
+  }
+  
+  .footer-nav, .footer-social {
+    text-align: center;
+  }
+  
+  footer .social-links {
+    justify-content: center;
+  }
+}
+
+/* Extra small screens (small mobile, less than 576px) */
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+  
+  .slogan {
+    font-size: 16px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+  
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .stat-box {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .footer-nav, .footer-social {
+    width: 100%;
+  }
+}

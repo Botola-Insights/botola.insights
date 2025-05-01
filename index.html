@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Botola Insights | Empowering Moroccan League with Data</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+    <link rel="stylesheet" href="./styles/animations.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <h2>Botola Insights</h2>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <h1>Botola Insights</h1>
+          <p class="slogan">Empowering Moroccan league with data</p>
+          <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+        <div class="hero-image">
+          <div class="shape"></div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container">
+          <h2 class="section-title">About Us</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <p>Botola Insights is dedicated to revolutionizing the Moroccan football league through comprehensive data analysis and insights. We provide clubs, coaches, players, and fans with the tools they need to understand the beautiful game on a deeper level.</p>
+              <p>Our mission is to elevate Moroccan football by bringing modern analytics to every aspect of the game, from player performance to tactical analysis and beyond.</p>
+            </div>
+            <div class="stats-container">
+              <div class="stat-box">
+                <span class="stat-number">16+</span>
+                <span class="stat-label">Teams Analyzed</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Players Tracked</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">1000+</span>
+                <span class="stat-label">Insights Delivered</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services">
+        <div class="container">
+          <h2 class="section-title">Our Services</h2>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3>Performance Analytics</h3>
+              <p>Comprehensive player and team performance data with actionable insights for improvement.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3>Talent Identification</h3>
+              <p>Data-driven approach to identifying emerging talents across the Moroccan leagues.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <h3>Tactical Analysis</h3>
+              <p>Advanced tactical breakdowns using the latest analytical techniques and visualization tools.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h3>Custom Solutions</h3>
+              <p>Tailored data solutions for clubs, media organizations, and other stakeholders.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2 class="section-title">Contact Us</h2>
+          <div class="contact-content">
+            <div class="contact-info">
+              <p>Get in touch with our team to learn more about how Botola Insights can transform your understanding of Moroccan football.</p>
+              
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:info@botolainsights.com">info@botolainsights.com</a>
+              </div>
+              
+              <div class="social-links">
+                <a href="https://twitter.com/botolainsights" class="social-icon" target="_blank" aria-label="Twitter">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com/botolainsights" class="social-icon" target="_blank" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com/company/botola-insights" class="social-icon" target="_blank" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://youtube.com/c/botolainsights" class="social-icon" target="_blank" aria-label="YouTube">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <form id="contactForm">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h3>Botola Insights</h3>
+            <p>Empowering Moroccan league with data</p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-nav">
+              <h4>Navigation</h4>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-social">
+              <h4>Connect With Us</h4>
+              <div class="social-links">
+                <a href="https://twitter.com/botolainsights" class="social-icon" target="_blank" aria-label="Twitter">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com/botolainsights" class="social-icon" target="_blank" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com/company/botola-insights" class="social-icon" target="_blank" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://youtube.com/c/botolainsights" class="social-icon" target="_blank" aria-label="YouTube">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 Botola Insights. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="./js/main.js"></script>
+  </body>
+</html>

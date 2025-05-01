@@ -1,0 +1,134 @@
+/* Animations */
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Slide up animation */
+@keyframes slideUp {
+  from { 
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Subtle background gradient animation */
+@keyframes gradientBg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Apply animations */
+
+/* Hero section animations */
+.hero h1 {
+  animation: fadeIn 1s ease-out, slideUp 1s ease-out;
+}
+
+.slogan {
+  animation: fadeIn 1s ease-out 0.3s, slideUp 1s ease-out 0.3s;
+  animation-fill-mode: both;
+}
+
+.cta-button {
+  animation: fadeIn 1s ease-out 0.6s, slideUp 1s ease-out 0.6s;
+  animation-fill-mode: both;
+}
+
+/* Services animations */
+.service-card {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Stats box hover pulse */
+.stat-box:hover .stat-number {
+  animation: pulse 1.5s infinite;
+}
+
+/* Form submit button hover effect */
+.submit-button:hover {
+  animation: pulse 1s;
+}
+
+/* Navigation link animation */
+.nav-links a:hover {
+  transition: all 0.3s ease;
+}
+
+/* Service icon animation */
+.service-icon i {
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon i {
+  transform: scale(1.2);
+}
+
+/* Social icon hover animation */
+.social-icon i {
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover i {
+  transform: rotate(360deg);
+  transition: transform 0.6s ease;
+}
+
+/* Section title animation */
+.section-title {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-title::after {
+  animation: slideUp 0.8s ease-out;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animate elements when they come into view */
+@media (prefers-reduced-motion: no-preference) {
+  .about-content, 
+  .services-grid, 
+  .contact-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .about-content.visible, 
+  .services-grid.visible, 
+  .contact-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
