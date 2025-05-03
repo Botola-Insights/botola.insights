@@ -51,22 +51,56 @@ document.addEventListener('DOMContentLoaded', function() {
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
       
-      // Get form values
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
+      const formData = new FormData(contactForm);
+      const url = contactForm.getAttribute('action');
+      console.log(formData.values)
       
-      // In a real application, you would send this data to a server
-      // For now, we'll just log it and show a success message
-      console.log('Form submitted:', { name, email, message });
+      // Create status message element if it doesn't exist
+      let formStatus = document.getElementById('form-status');
+      if (!formStatus) {
+        formStatus = document.createElement('div');
+        formStatus.id = 'form-status';
+        contactForm.appendChild(formStatus);
+      }
       
-      // Show success message
-      contactForm.innerHTML = `
-        <div class="success-message">
-          <h3>Thank you for your message!</h3>
-          <p>We'll get back to you as soon as possible.</p>
-        </div>
-      `;
+      // Send form data to Formspree
+      fetch(url, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.ok) {
+          // Success message
+          // Show success message
+          contactForm.reset();
+          contactForm.innerHTML = `
+          <div class="success-message">
+            <h3>Thank you for your message!</h3>
+            <p>We'll get back to you as soon as possible.</p>
+          </div>
+        `;
+        } else {
+          // Error message
+          formStatus.innerHTML = "Oops! There was a problem sending your message.";
+          formStatus.className = "error";
+        }
+        formStatus.style.display = "block";
+        
+        // Hide the status message after 5 seconds
+        setTimeout(function() {
+          formStatus.style.display = "none";
+        }, 5000);
+      })
+      .catch(error => {
+        formStatus.innerHTML = "Oops! There was a problem sending your message.";
+        formStatus.className = "error";
+        formStatus.style.display = "block";
+        console.error('Error:', error);
+      });
     });
   }
 });
